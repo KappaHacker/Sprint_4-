@@ -1,4 +1,4 @@
-import org.example.PageObject.HomePage;
+import org.example.page.HomePage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -14,7 +14,7 @@ public class TestCaseHome extends BaseTest {
     }
 
     // Подстовляем все 8 вопросов и ответов (через индексы массивов)
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{index}: Тестовые данные массива: ANSWERS[{0}]")
     public static Object[][] getNumber() {
         return new Object[][]{
                 {0}, {1}, {2}, {3},

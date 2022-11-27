@@ -1,4 +1,4 @@
-import org.example.PageObject.OrderPage;
+import org.example.page.OrderPage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -28,7 +28,7 @@ public class TestCaseOrder extends BaseTest {
         COMM = comm;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{index}: Тестовые данные: {0} - {1} - {2} - {3} - {4} - {5} - {6} - {7}")
     public static Object[][] getNumber() {
         return new Object[][]{
                 {"Ирина", "Плохая", "ул. Вашего д.25 кв.5", "Сокольники", "88005553535", "16.07.2022", "сутки", "Приветы проверяющим =)"},

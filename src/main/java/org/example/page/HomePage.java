@@ -1,4 +1,4 @@
-package org.example.PageObject;
+package org.example.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,24 +17,27 @@ public class HomePage extends BasePage {
             "Да, обязательно. Всем самокатов! И Москве, и Московской области."
     };
     // Массив локаторов для вопросов из столбца "Вопросы о важном"
-    private final By[] LOCATORS_QUESTIONS = {By.xpath(".//div[@class='accordion']/div[1]"),
-            By.xpath(".//div[@class='accordion']/div[2]"),
-            By.xpath(".//div[@class='accordion']/div[3]"),
-            By.xpath(".//div[@class='accordion']/div[4]"),
-            By.xpath(".//div[@class='accordion']/div[5]"),
-            By.xpath(".//div[@class='accordion']/div[6]"),
-            By.xpath(".//div[@class='accordion']/div[7]"),
-            By.xpath(".//div[@class='accordion']/div[8]")
+    private final By[] LOCATORS_QUESTIONS = {
+            By.cssSelector("#accordion__heading-0"),
+            By.cssSelector("#accordion__heading-1"),
+            By.cssSelector("#accordion__heading-2"),
+            By.cssSelector("#accordion__heading-3"),
+            By.cssSelector("#accordion__heading-4"),
+            By.cssSelector("#accordion__heading-5"),
+            By.cssSelector("#accordion__heading-6"),
+            By.cssSelector("#accordion__heading-7")
     };
     // Массив локаторов для ответов из столбца "Вопросы о важном"
-    private final By[] LOCATORS_ANSWERS = {By.xpath(".//div[@id='accordion__panel-0']/p"),
-            By.xpath(".//div[@id='accordion__panel-1']/p"),
-            By.xpath(".//div[@id='accordion__panel-2']/p"),
-            By.xpath(".//div[@id='accordion__panel-3']/p"),
-            By.xpath(".//div[@id='accordion__panel-4']/p"),
-            By.xpath(".//div[@id='accordion__panel-5']/p"),
-            By.xpath(".//div[@id='accordion__panel-6']/p"),
-            By.xpath(".//div[@id='accordion__panel-7']/p")
+    //#accordion__panel-0 > p
+    private final By[] LOCATORS_ANSWERS = {
+            By.cssSelector("#accordion__panel-0 > p"),
+            By.cssSelector("#accordion__panel-1 > p"),
+            By.cssSelector("#accordion__panel-2 > p"),
+            By.cssSelector("#accordion__panel-3 > p"),
+            By.cssSelector("#accordion__panel-4 > p"),
+            By.cssSelector("#accordion__panel-5 > p"),
+            By.cssSelector("#accordion__panel-6 > p"),
+            By.cssSelector("#accordion__panel-7 > p"),
     };
 
     public HomePage(WebDriver driver) {
